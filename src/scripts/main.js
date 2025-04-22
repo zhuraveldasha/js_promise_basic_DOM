@@ -28,8 +28,8 @@ function appendMessage(text, isError = false) {
 
 promise1
   .then((message) => appendMessage(message))
-  .catch((error) => appendMessage(error, true));
+  .catch((error) => appendMessage(error.message, true));
 
 promise2
   .then((message) => appendMessage(message))
-  .catch((error) => appendMessage(error, true));
+  .catch((error) => appendMessage(error.message, true));
